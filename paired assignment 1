@@ -1,0 +1,49 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package glovius.maximus;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author William
+ */
+public class GloviusMaximus {
+
+        String name;
+        String instructions = "This is Glovius Maximus! \n"
+                + "You are on an "
+                + "amazing adventure to save your good friend, \n"
+                + "Glovius Maximus's, Sister! Glovius couldn't be \n"
+                + "here for all the heroic stuff so you kindly \n"
+                + "volunteered to take his place as the hero! \n"
+                + "You will encounter many obstacles on your journey. \n"
+                + "It is up to you to overcome the various puzzles \n"
+                + "that will try to hinder your progress. At any time \n"
+                + "you may type \"help\" to show a list of commands \n"
+                + "that will aid you on your journey! \n\n"
+                + "Good luck, adventurer. You'll need it.";
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        GloviusMaximus mygame = new GloviusMaximus();
+        mygame.getName();
+        mygame.displayHelp();
+        // TODO code application logic here
+    }
+    
+    public void getName(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("What do they call you?");
+        this.name = input.next();
+    }
+    
+    public void displayHelp(){
+        System.out.println("\n Welcome " + this.name + "!");
+        System.out.println(this.instructions);
+    }
+    
+}
